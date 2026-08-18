@@ -262,7 +262,23 @@
       .nav-btn { padding: 7px 10px; }
       .steps-grid { grid-template-columns: 1fr; }
       .app-section { flex-wrap: wrap; }
-      .rib-cell { width: 26px; height: 32px; font-size: 13px; }
+      .rib-grid {
+        flex-wrap: nowrap;
+        overflow-x: visible;
+        gap: 1px;
+      }
+      .rib-cell {
+        flex: 1 1 0;
+        width: auto;
+        min-width: 0;
+        height: 28px;
+        font-size: 11px;
+        padding: 0;
+      }
+      .rib-sep {
+        flex: 0 0 4px;
+        width: 4px;
+      }
 
       .fab-group { bottom: 90px; right: 12px; width: auto; gap: 10px; }
       .fab {
