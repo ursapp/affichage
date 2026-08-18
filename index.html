@@ -254,13 +254,23 @@
     }
     .frais-note strong { color: #f7a56e; }
 
-    @media (max-width: 600px) {
+    @media (max-width: 1080px) {
+      .shared-header { justify-content: space-between; }
       .shared-header .org-name { display: none; }
+      .nav-btns { margin-left: auto; }
       .nav-btn span { display: none; }
       .nav-btn { padding: 7px 10px; }
       .steps-grid { grid-template-columns: 1fr; }
       .app-section { flex-wrap: wrap; }
       .rib-cell { width: 26px; height: 32px; font-size: 13px; }
+
+      .fab-group { bottom: 90px; right: 12px; width: auto; gap: 10px; }
+      .fab {
+        width: 48px; height: 48px; padding: 0;
+        border-radius: 50%; justify-content: center;
+      }
+      .fab i { font-size: 19px; }
+      .fab-label { display: none; }
     }
   </style>
 </head>
@@ -383,13 +393,13 @@
     <div class="step-label" id="stepLabel">Chargement...</div>
     <div class="fab-group">
       <button class="fab fab-route1 active" id="btnRoute1" onclick="setRoute('route1')">
-        <i class="bi bi-1-circle-fill"></i> Itinéraire 1
+        <i class="bi bi-1-circle-fill"></i> <span class="fab-label">Itinéraire 1</span>
       </button>
       <button class="fab fab-route2" id="btnRoute2" onclick="setRoute('route2')">
-        <i class="bi bi-2-circle-fill"></i> Itinéraire 2
+        <i class="bi bi-2-circle-fill"></i> <span class="fab-label">Itinéraire 2</span>
       </button>
       <button class="fab fab-route3" id="btnRoute3" onclick="setRoute('route3')">
-        <i class="bi bi-3-circle-fill"></i> Itinéraire 3
+        <i class="bi bi-3-circle-fill"></i> <span class="fab-label">Itinéraire 3</span>
       </button>
     </div>
   </div>
